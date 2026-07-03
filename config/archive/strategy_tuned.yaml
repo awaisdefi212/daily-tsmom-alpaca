@@ -1,0 +1,49 @@
+symbol: USATECHIDXUSD
+data:
+  ask_path: Data/Raw/USATECHIDXUSD_1 Min_Ask_2016.01.01_2026.06.16.csv
+  bid_path: Data/Raw/USATECHIDXUSD_1 Min_Bid_2016.01.01_2026.06.16.csv
+  source_tz: Europe/Helsinki
+  max_spread_points: 50.0
+session:
+  timezone: America/New_York
+  rth_open: "09:30"
+  rth_close: "16:00"
+orb:
+  minutes: 45
+  min_width_points: 25
+  max_width_points: 70
+vwap:
+  anchor: rth_open
+  slope_lookback_bars: 15
+strategy:
+  max_trades_per_direction: 1
+  entry_mode: pullback_retest
+  entry_start: "10:15"
+  entry_cutoff: "11:30"
+  require_vwap_guard: true
+  entry_on: close
+  min_vwap_distance_orb_frac: 0.15
+  require_vwap_slope: true
+  min_breakout_volume_mult: 1.2
+  reject_reentry_next_bar: false
+  retest_max_bars: 15
+  retest_tolerance_points: 3
+  arm_cancel_inside_bars: 2
+  progress_check_time: null
+  min_progress_r: 0.25
+  hard_exit_time: "15:30"
+  hard_exit_min_r: 0.5
+risk:
+  stop_mode: fixed_points
+  stop_buffer_points: 2
+  fixed_stop_points: 25
+  target_r_multiple: 2.5
+  trail_after_r: 2.0
+  trail_step_r: 0.25
+  trail_step_in_r: true
+  scale_out_r: null
+  scale_out_pct: 0.5
+  runner_target_r: 4.0
+costs:
+  slippage_points: 0.5
+  reject_ask_only_backtest: true

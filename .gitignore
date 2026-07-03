@@ -1,0 +1,19 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Large Dukascopy minute CSVs — keep locally, not on GitHub
+Data/Raw/*.csv
+Data/processed/merged_bars.parquet
+Data/processed/*.parquet
+
+# Live paper logs (may contain fill data)
+Data/paper_trade/alpaca_tsmom_log.csv
+Data/paper_trade/paper_trade_log.csv
+logs/

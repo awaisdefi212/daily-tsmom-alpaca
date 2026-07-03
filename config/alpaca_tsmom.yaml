@@ -1,0 +1,15 @@
+# Alpaca paper trading — monthly TSMOM long-only (ES proxy via SPY)
+#
+# Backtest used Dukascopy USA500IDXUSD (S&P 500 CFD points).
+# Alpaca trades US equities; SPY is the practical S&P 500 exposure.
+# Returns are correlated but not identical to ES CFD points.
+
+alpaca:
+  symbol: SPY
+  paper: true
+  tsmom_lookback_days: 252
+  tsmom_long_only: true
+  position_fraction: 0.95
+  min_history_bars: 300
+  data_feed: iex
+  paper_log_path: data/paper_trade/alpaca_tsmom_log.csv
