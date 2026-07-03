@@ -25,8 +25,14 @@ class AlpacaSettings(BaseModel):
         return value.lower().strip()
 
 
+class TelegramSettings(BaseModel):
+    enabled: bool = True
+    notify_on_no_op: bool = True
+
+
 class AlpacaTsmomConfig(BaseModel):
     alpaca: AlpacaSettings = Field(default_factory=AlpacaSettings)
+    telegram: TelegramSettings = Field(default_factory=TelegramSettings)
 
 
 def load_alpaca_config(path: str | Path) -> AlpacaTsmomConfig:

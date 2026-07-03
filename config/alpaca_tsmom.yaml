@@ -13,3 +13,7 @@ alpaca:
   min_history_bars: 300
   data_feed: iex
   paper_log_path: data/paper_trade/alpaca_tsmom_log.csv
+
+telegram:
+  enabled: true
+  notify_on_no_op: true

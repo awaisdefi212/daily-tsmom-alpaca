@@ -24,6 +24,12 @@ nano .env
 
 Set `APCA_API_KEY_ID` and `APCA_API_SECRET_KEY` from your Alpaca paper dashboard.
 
+Telegram alerts (recommended on VPS): see [TELEGRAM_SETUP.md](TELEGRAM_SETUP.md).
+
+```bash
+python scripts/test_telegram.py
+```
+
 ## 4. Test
 
 ```bash

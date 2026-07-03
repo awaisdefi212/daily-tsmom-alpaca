@@ -27,6 +27,8 @@ python scripts/run_alpaca_tsmom.py --execute
 
 See [docs/ALPACA_SETUP.md](docs/ALPACA_SETUP.md) (SPY proxy for ES).
 
+Telegram alerts: [docs/TELEGRAM_SETUP.md](docs/TELEGRAM_SETUP.md).
+
 ## VPS deploy
 
 Clone from GitHub and schedule monthly runs — [docs/VPS_SETUP.md](docs/VPS_SETUP.md).
